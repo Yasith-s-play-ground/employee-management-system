@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep12.fx.controls.controller.view_controller.AddEmployeeViewController">
+   <children>
+      <GridPane layoutX="83.0" layoutY="37.0" prefHeight="413.0" prefWidth="729.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="37.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="177.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="552.0" minWidth="10.0" prefWidth="552.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="8.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="203.0" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Id : ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmployeeId" prefHeight="18.0" prefWidth="79.0" text="emp Id" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="10.0" layoutY="16.0" text="Name* : " GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAddress" layoutX="10.0" layoutY="46.0" text="Address* : " GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtName" onAction="#txtNameOnAction" onKeyReleased="#txtNameOnKeyReleased" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtAddress" layoutX="249.0" layoutY="43.0" onAction="#txtAddressOnAction" onKeyReleased="#txtAddressOnKeyReleased" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="lblCountry" layoutX="10.0" layoutY="76.0" text="Country* : " GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCountry" layoutX="249.0" layoutY="73.0" onAction="#txtCountryOnAction" onKeyReleased="#txtCountryOnKeyReleased" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="lblGender" layoutX="10.0" layoutY="106.0" text="Gender* : " GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <children>
+                  <RadioButton fx:id="rdButtonMale" mnemonicParsing="false" onAction="#rdButtonMaleOnAction" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="rdBtnGroupGender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdButtonFemale" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#rdButtonFemaleOnAction" text="Female" toggleGroup="$rdBtnGroupGender" />
+               </children>
+            </HBox>
+            <Label fx:id="lblContact" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="136.0" prefHeight="89.0" prefWidth="76.0" text="Contact* : " GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox fx:id="vBoxContacts" prefHeight="80.0" prefWidth="489.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <HBox prefHeight="24.0" prefWidth="207.0">
+                     <children>
+                        <TextField fx:id="txtMainContact" onAction="#txtMainContactOnAction" onKeyReleased="#txtMainContactOnKeyReleased" />
+                        <Button fx:id="btnAddAnotherContact" mnemonicParsing="false" onAction="#btnAddAnotherContactOnAction" text="+" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="lblQualifications" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="170.0" prefHeight="130.0" prefWidth="119.0" text="Qualifications* : " GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="124.0" prefWidth="489.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <HBox onKeyReleased="#txtCertificateOnKeyReleased" prefHeight="32.0" prefWidth="368.0">
+                     <children>
+                        <CheckBox fx:id="chkBoxCertificate" mnemonicParsing="false" onAction="#chkBoxCertificateOnAction" prefHeight="18.0" prefWidth="108.0" text="Certificate" />
+                        <TextField fx:id="txtCertificate" onAction="#txtCertificateOnAction" onKeyReleased="#txtCertificateOnKeyReleased" prefHeight="24.0" prefWidth="254.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="32.0" prefWidth="368.0">
+                     <children>
+                        <CheckBox fx:id="chkDiploma" mnemonicParsing="false" onAction="#chkDiplomaOnAction" prefHeight="18.0" prefWidth="108.0" text="Diploma" />
+                        <TextField fx:id="txtDiploma" onAction="#txtDiplomaOnAction" onKeyReleased="#txtDiplomaOnKeyReleased" prefHeight="24.0" prefWidth="254.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="32.0" prefWidth="368.0">
+                     <children>
+                        <CheckBox fx:id="chkBSc" mnemonicParsing="false" onAction="#chkBScOnAction" prefHeight="18.0" prefWidth="108.0" text="BSc." />
+                        <TextField fx:id="txtBSc" onAction="#txtBScOnAction" onKeyReleased="#txtBScOnKeyReleased" prefHeight="24.0" prefWidth="254.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="74.0" prefHeight="32.0" prefWidth="368.0">
+                     <children>
+                        <CheckBox fx:id="chkMSc" mnemonicParsing="false" onAction="#chkMScOnAction" prefHeight="18.0" prefWidth="108.0" text="MSc." />
+                        <TextField fx:id="txtMSc" onAction="#txtMScOnAction" onKeyReleased="#txtMScOnKeyReleased" prefHeight="24.0" prefWidth="254.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="lblDateOfBirth" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="240.0" prefHeight="130.0" prefWidth="119.0" text="Date of Birth* : " GridPane.rowIndex="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <DatePicker fx:id="dtPckrBirthDay" editable="false" onAction="#dtPckrBirthDayOnAction" />
+                  <Label fx:id="lblEmployeeIsNotAnAdult" contentDisplay="TOP" prefHeight="24.0" prefWidth="305.0" text="This employee is below 18 years old!!" textFill="#f50505">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <Button defaultButton="true" layoutX="828.0" layoutY="37.0" mnemonicParsing="false" onAction="#btnNewEmployeeOnAction" text="+ New Employee" />
+      <Button fx:id="btnSave" layoutX="772.0" layoutY="461.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="98.0" text="Save" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="118.0" />
+   </children>
+</AnchorPane>
