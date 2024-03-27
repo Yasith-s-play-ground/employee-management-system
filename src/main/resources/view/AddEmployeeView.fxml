@@ -19,8 +19,8 @@
    <children>
       <GridPane layoutX="83.0" layoutY="37.0" prefHeight="413.0" prefWidth="729.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="37.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="177.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="552.0" minWidth="10.0" prefWidth="552.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="128.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="625.0" minWidth="10.0" prefWidth="601.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
@@ -33,7 +33,7 @@
             <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Id : ">
+            <Label alignment="CENTER_RIGHT" prefWidth="120.0" text="Id : ">
                <font>
                   <Font size="14.0" />
                </font>
@@ -43,25 +43,25 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="lblName" layoutX="10.0" layoutY="16.0" text="Name* : " GridPane.rowIndex="1">
+            <Label fx:id="lblName" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="16.0" prefWidth="120.0" text="Name* : " GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="lblAddress" layoutX="10.0" layoutY="46.0" text="Address* : " GridPane.rowIndex="2">
+            <Label fx:id="lblAddress" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="46.0" prefWidth="120.0" text="Address* : " GridPane.rowIndex="2">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <TextField fx:id="txtName" onAction="#txtNameOnAction" onKeyReleased="#txtNameOnKeyReleased" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="txtAddress" layoutX="249.0" layoutY="43.0" onAction="#txtAddressOnAction" onKeyReleased="#txtAddressOnKeyReleased" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label fx:id="lblCountry" layoutX="10.0" layoutY="76.0" text="Country* : " GridPane.rowIndex="3">
+            <Label fx:id="lblCountry" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="76.0" prefWidth="120.0" text="Country* : " GridPane.rowIndex="3">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <TextField fx:id="txtCountry" layoutX="249.0" layoutY="73.0" onAction="#txtCountryOnAction" onKeyReleased="#txtCountryOnKeyReleased" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label fx:id="lblGender" layoutX="10.0" layoutY="106.0" text="Gender* : " GridPane.rowIndex="4">
+            <Label fx:id="lblGender" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="106.0" prefWidth="120.0" text="Gender* : " GridPane.rowIndex="4">
                <font>
                   <Font size="14.0" />
                </font>
@@ -76,7 +76,7 @@
                   <RadioButton fx:id="rdButtonFemale" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#rdButtonFemaleOnAction" text="Female" toggleGroup="$rdBtnGroupGender" />
                </children>
             </HBox>
-            <Label fx:id="lblContact" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="136.0" prefHeight="89.0" prefWidth="76.0" text="Contact* : " GridPane.rowIndex="5">
+            <Label fx:id="lblContact" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="10.0" layoutY="136.0" prefHeight="89.0" prefWidth="120.0" text="Contact* : " GridPane.rowIndex="5">
                <font>
                   <Font size="14.0" />
                </font>
@@ -91,7 +91,7 @@
                   </HBox>
                </children>
             </VBox>
-            <Label fx:id="lblQualifications" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="170.0" prefHeight="130.0" prefWidth="119.0" text="Qualifications* : " GridPane.rowIndex="6">
+            <Label fx:id="lblQualifications" alignment="TOP_RIGHT" contentDisplay="TOP" layoutX="10.0" layoutY="170.0" prefHeight="130.0" prefWidth="120.0" text="Qualifications* : " GridPane.rowIndex="6">
                <font>
                   <Font size="14.0" />
                </font>
@@ -124,7 +124,7 @@
                   </HBox>
                </children>
             </VBox>
-            <Label fx:id="lblDateOfBirth" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="240.0" prefHeight="130.0" prefWidth="119.0" text="Date of Birth* : " GridPane.rowIndex="7">
+            <Label fx:id="lblDateOfBirth" alignment="TOP_RIGHT" contentDisplay="TOP" layoutX="10.0" layoutY="240.0" prefHeight="130.0" prefWidth="120.0" text="Date of Birth* : " GridPane.rowIndex="7">
                <font>
                   <Font size="14.0" />
                </font>
