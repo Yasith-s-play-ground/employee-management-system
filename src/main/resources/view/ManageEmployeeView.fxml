@@ -17,7 +17,7 @@
 
 <AnchorPane prefHeight="510.0" prefWidth="988.0" stylesheets="@../css/ManageEmployeeView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep12.fx.controls.controller.view_controller.ManageEmployeeViewController">
    <children>
-      <GridPane layoutX="83.0" layoutY="37.0" prefHeight="413.0" prefWidth="729.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="37.0">
+      <GridPane fx:id="mainGridPane" layoutX="83.0" layoutY="37.0" prefHeight="413.0" prefWidth="729.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="37.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="128.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="625.0" minWidth="10.0" prefWidth="601.0" />
@@ -177,7 +177,7 @@
             </HBox>
             <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="122.0" prefHeight="83.0" prefWidth="128.0" spacing="5.0" GridPane.rowIndex="5">
                <children>
-                  <Label fx:id="lblContact" accessibleText="#txtMainContact" alignment="CENTER_RIGHT" mnemonicParsing="true" prefHeight="18.0" prefWidth="76.0" text="_Contact">
+                  <Label fx:id="lblContact" accessibleText="#txtMainContact" alignment="CENTER_RIGHT" mnemonicParsing="true" prefHeight="18.0" prefWidth="76.0" text="C_ontact">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -253,7 +253,7 @@
             </HBox>
          </children>
       </GridPane>
-      <Button layoutX="828.0" layoutY="37.0" mnemonicParsing="false" onAction="#btnNewEmployeeOnAction" text="+ New Employee" />
+      <Button fx:id="btnNewEmployee" layoutX="828.0" layoutY="37.0" mnemonicParsing="false" onAction="#btnNewEmployeeOnAction" text="+ New Employee" />
       <Button fx:id="btnSave" defaultButton="true" layoutX="772.0" layoutY="461.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="98.0" text="Save" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="118.0" />
    </children>
 </AnchorPane>

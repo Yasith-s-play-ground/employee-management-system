@@ -1,12 +1,10 @@
 package lk.ijse.dep12.fx.controls.controller.view_controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import lk.ijse.dep12.fx.controls.controller.model_controller.EmployeeController;
 import lk.ijse.dep12.fx.controls.model.Employee;
@@ -46,6 +44,8 @@ public class ManageEmployeeViewController {
     public Label lblDateOfBirth;
     public Label lblEmployeeIsNotAnAdult;
     public Label lblId;
+    public GridPane mainGridPane;
+    public Button btnNewEmployee;
     private ArrayList<TextField> contactTexts = new ArrayList<>();
 
     private boolean onceTriedToSave = false;
@@ -53,6 +53,12 @@ public class ManageEmployeeViewController {
     public void initialize() {
         clearTheForm();
         contactTexts.add(txtMainContact);
+
+        for (Node node : mainGridPane.lookupAll(".label")) { // searching for the labels in anchor pane
+            Label lbl = (Label) node;
+            lbl.setLabelFor(mainGridPane.lookup(lbl.getAccessibleText()));
+        }
+
     }
 
     private boolean checkEmployeeIsAnAdult() throws ParseException {
@@ -239,6 +245,8 @@ public class ManageEmployeeViewController {
         }
         dtPckrBirthDay.setDisable(true);
         dtPckrBirthDay.setValue(null);
+
+        btnNewEmployee.requestFocus();
 
     }
 
