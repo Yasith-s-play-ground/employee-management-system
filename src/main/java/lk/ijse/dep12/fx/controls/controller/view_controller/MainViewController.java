@@ -38,7 +38,8 @@ public class MainViewController {
     }
 
     public void btnAddEmployeeOnAction(ActionEvent actionEvent) throws IOException {
-        AnchorPane container = FXMLLoader.load(getClass().getResource("/view/AddEmployeeView.fxml"));
+        // AnchorPane container = FXMLLoader.load(getClass().getResource("/view/AddEmployeeView.fxml"));
+        AnchorPane container = FXMLLoader.load(getClass().getResource("/view/ManageEmployeeView.fxml"));
         windowDisplayPane.getChildren().clear();
         windowDisplayPane.getChildren().add(container);
         AnchorPane.setLeftAnchor(container, 0.0);
